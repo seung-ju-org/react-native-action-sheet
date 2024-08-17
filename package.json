@@ -1,5 +1,5 @@
 {
-  "name": "react-native-action-sheet",
+  "name": "@seung-ju/react-native-action-sheet",
   "version": "0.1.0",
   "description": "ActionSheet for react native",
   "source": "./src/index.tsx",
@@ -51,14 +51,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seung-juv/react-native-action-sheet.git"
+    "url": "git+https://github.com/seung-ju-org/react-native-action-sheet.git"
   },
   "author": "Seung Ju <seung-ju@seung-ju.com> (https://github.com/seung-juv)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seung-juv/react-native-action-sheet/issues"
+    "url": "https://github.com/seung-ju-org/react-native-action-sheet/issues"
   },
-  "homepage": "https://github.com/seung-juv/react-native-action-sheet#readme",
+  "homepage": "https://github.com/seung-ju-org/react-native-action-sheet#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

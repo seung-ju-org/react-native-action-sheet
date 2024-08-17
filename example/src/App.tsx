@@ -1,17 +1,37 @@
-import { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-action-sheet';
+import { StyleSheet, View, Text, TouchableOpacity, Alert } from 'react-native';
+import ActionSheet from '@seung-ju/react-native-action-sheet';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
-
-  useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <TouchableOpacity
+        onPress={() => {
+          ActionSheet.open('Title', 'Message', [
+            {
+              text: 'Button 1',
+              onPress: () => {
+                Alert.alert('Button 1');
+              },
+            },
+            {
+              text: 'Button 2',
+              onPress: () => {
+                Alert.alert('Button 2');
+              },
+              style: 'destructive',
+            },
+            {
+              text: 'Cancel',
+              onPress: () => {
+                Alert.alert('Cancel');
+              },
+              style: 'cancel',
+            },
+          ]);
+        }}
+      >
+        <Text>Open Action Sheet</Text>
+      </TouchableOpacity>
     </View>
   );
 }

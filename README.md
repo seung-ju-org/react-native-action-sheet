@@ -1,4 +1,4 @@
-# react-native-action-sheet
+# @seung-ju/react-native-action-sheet
 
 ActionSheet for react native
 
@@ -10,15 +10,34 @@ npm install react-native-action-sheet
 
 ## Usage
 
-
 ```js
-import { multiply } from 'react-native-action-sheet';
+import ActionSheet from '@seung-ju/react-native-action-sheet';
 
 // ...
 
-const result = await multiply(3, 7);
+ActionSheet.open('Title', 'Message', [
+  {
+    text: 'Button 1',
+    onPress: () => {
+      Alert.alert('Button 1');
+    },
+  },
+  {
+    text: 'Button 2',
+    onPress: () => {
+      Alert.alert('Button 2');
+    },
+    style: 'destructive',
+  },
+  {
+    text: 'Cancel',
+    onPress: () => {
+      Alert.alert('Cancel');
+    },
+    style: 'cancel',
+  },
+]);
 ```
-
 
 ## Contributing
 
@@ -27,7 +46,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
