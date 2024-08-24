@@ -5,7 +5,7 @@ ActionSheet for react native
 ## Installation
 
 ```sh
-npm install react-native-action-sheet
+npm install @seung-ju/react-native-action-sheet
 ```
 
 ## Usage
